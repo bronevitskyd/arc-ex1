@@ -1,0 +1,19 @@
+import random
+class NPC:
+    def attaquer(self, cible):
+        attaque = random.randint(1,20)
+        if attaque == 20:
+            print("Attaque critique!")
+            cible.subir_dommage(8)
+        elif attaque == 1:
+            print("Attaque ratée.")
+        else:
+            if attaque >= cible.classe_armure:
+                print("Le héros touche l'adversaire.")
+                cible.subir_dommage(6)
+            else:
+                print("Le coup n'a pas fonctionner")
+
+
+
+
