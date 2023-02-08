@@ -1,18 +1,18 @@
-import random
-class NPC:
-    def attaquer(self, cible):
+import random #importation du mondule random
+class NPC: #creation de la classe NOC
+    def attaquer(self, cible): #definitre les parametres
         attaque = random.randint(1,20)
-        if attaque == 20:
+        if attaque == 20: #ef elif else pour les choix
             print("Attaque critique!")
             cible.subir_dommage(8)
         elif attaque == 1:
-            print("Attaque ratée.")
-        else:
+            print("Attaque ratée.") #print que lattaque na pas etait reussi car pas assez de dommage
+        else:# si la condition est fausse, alors...
             if attaque >= cible.classe_armure:
                 print("Le héros touche l'adversaire.")
                 cible.subir_dommage(6)
-            else:
-                print("Le coup n'a pas fonctionner")
+            else: #si la condition est fausse, alors...
+                print("Le coup n'a pas fonctionner") #print que le coup na pas fontionner
 
 
 
